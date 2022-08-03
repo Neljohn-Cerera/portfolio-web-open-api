@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "pm2 start index.js",
+    "start": "node index.js",
     "postinstall": "yarn run start"
   },
   "keywords": [],
@@ -20,7 +20,6 @@
     "lodash": "^4.17.21",
     "lowdb": "^3.0.0",
     "nanoid": "^4.0.0",
-    "pm2": "^5.2.0",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.5.0"
   },
