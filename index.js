@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import dotenv from "dotenv";
+import cors from "cors"
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ const specs = swaggerJsDoc(options);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 
 const main = async () => {
   const adapter = new JSONFile("db.json");
